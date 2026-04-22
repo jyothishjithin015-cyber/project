@@ -1,12 +1,12 @@
-name: SampleCIworkflow
+name: SampleCI
 on:
-push:
-branches: ["main"]
+  push:
+    branches: ["main"]
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout Repository
-uses: actions/checkout@v4
-- name: Run npm install
-run: npm instal
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Run a broken command
+        run: npm instal
